@@ -1,0 +1,10 @@
+{% extends 'shablon.html' %}
+{% load static %}
+{% block title %} Yangilik {% endblock title %}
+{% block content %}
+<form method='post' enctype='multipart/form-data'> {% csrf_token %} 
+{{ form.as_p }}
+<button type="submit"> Yangilik qo'shish </button>
+</form>
+  
+{% endblock content %}

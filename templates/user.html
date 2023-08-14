@@ -1,0 +1,21 @@
+{% extends 'shablon.html' %}
+{% load static %}
+{% block title %} Ro'yxatdan o'tish {% endblock title %}
+{% block content %}
+<h1> Ro'yxatdan o'tish </h1>
+
+
+<form action="" method="post">{% csrf_token %}
+    <p>welcome "{{ form.as_p }}"</p>
+    <input type="submit" value="Login" />
+ </form>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

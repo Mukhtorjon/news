@@ -1,0 +1,19 @@
+{% extends 'shablon.html' %}
+{% load static %}
+{% block title %} Foydalanuvchi malumotlarini o'zgartrish{% endblock title %}
+{% block content %}
+<h1>Foydalanuvchi malumotlarini o'zgartrish</h1><br>
+<form method="post" enctype= "multipart/form-data">{% csrf_token %}
+    {{ userform.as_p }} {{ profilform.as_p }}
+    <button type='sumbit'> O'zgatrish </button>
+</form>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'shablon.html' %}
+{% load static %}
+{% block title %} Foydalanuvchi {% endblock title %}
+{% block content %}
+<h1>Foydalanuvchi profili</h1><br>
+
+Assalomu Alaykum {{ user.username }}<br>
+Siz haqingizdgi malumotlar<br>
+<img src="{{ profil.photo.url }}" width="150" height="150"><br>
+<label> Manzil </label> <input value="{{ profil.manzil }}" readonly><br>
+<label> Username: </label> <input value="{{ user.username }}" readonly><br>
+<label> Email: </label> <input value="{{ user.email }}" readonly><br>
+<label> Ismingiz: </label> <input value="{{ user.first_name }}" readonly><br>
+<label> Familyangiz: </label> <input value="{{ user.last_name }}" readonly><br>
+<label> Mobil raqam </label> <input value="{{ user.phone_number}}" readonly><br>
+<a href="{% url 'passwordchange' %}">Parolni o'zgartrish</a>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'shablon.html' %}
+{% load static %}
+{% block title %} Ro'yxatdan O'tkazish {% endblock title %}
+{% block content %}
+<h1>Ro'yxatdan O'tkazish</h1><br>
+<form method='post'> {% csrf_token %}
+    {{ form.as_p}}
+<button type='sumbit'> Ro'yxatdan O'tkazish </button>
+</form>
+
+
+
+{% endblock content %}
